@@ -1,0 +1,537 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>醉美天下</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<script language="javascript">
+	function aaa(){
+		window.location.href="zc.html" ;
+	}
+	function visible(cursor,i){ 
+	if (i==0) 
+		cursor.filters.alpha.opacity=100; 
+	else 
+		cursor.filters.alpha.opacity=50;
+}
+	function poi(){
+		if(form11.username.value==""){ 		//通过if语句判断用户名是否为空
+      		alert("请输入用户名!");		//如果为空则弹出提示信息
+      		form11.username.focus();		//返回到指定位置
+      		return(false); 
+		}
+		if(form11.pass.value==""){ 		//通过if语句判断用户名是否为空
+      		alert("请输入密码!");		//如果为空则弹出提示信息
+      		form11.pass.focus();		//返回到指定位置
+      		return(false); 
+		} 
+		lkj();
+		
+	}
+	function lkj(){
+		if(form11.username.value=="aaa"&&form11.pass.value=="111"){
+			alert("欢迎回来！");
+			mnb();
+		}
+		else
+			alert("用户名或密码错误！");
+				
+	}
+	function mnb(){
+		document.getElementById("name").innerHTML=document.getElementById("username").value;
+	}
+</script>
+
+<style type="text/css">
+<!--
+#Layer1 {
+	position:absolute;
+	left:974px;
+	top:1px;
+	width:598px;
+	height:62px;
+	z-index:1;
+}
+#Layer2 {
+	position:absolute;
+	left:15px;
+	top:3px;
+	width:254px;
+	height:63px;
+	z-index:2;
+}
+#Layer3 {
+	position:absolute;
+	left:36px;
+	top:300px;
+	width:226px;
+	height:103px;
+	z-index:3;
+}
+#Layer4 {
+	position:absolute;
+	left:-1px;
+	top:337px;
+	width:237px;
+	height:190px;
+	z-index:4;
+}
+-->
+</style>
+</head>
+<body>
+
+<div id="Layer2">
+  <table width="216" height="23" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td id="name"></td>
+    </tr>
+  </table>
+</div>
+<div id="Layer3">
+<form id="form12" name="form12" method="post" action=""><font size="+" color="#FF0000" face="Palatino Linotype, Book Antiqua, Palatino, serif">
+您已在本站点停留：
+  <label for="textfield"></label>
+  <input type="text" name="textfield" id="textfield" /></font>
+</form>
+<script language="javascript">
+	var secend=0;
+	var minute=0;
+	var hour=0;
+	window.setTimeout("as();",1000);
+	function as(){
+		secend++;
+		if(secend==60){
+			secend=0;
+			minute++;
+		}
+		if(minute==60){
+			hour++;
+		}
+		document.form12.textfield.value=hour+"时"+minute+"分"+secend+"秒";
+		window.setTimeout("as();",1000);
+	}
+</script>
+
+</div>
+<div id="Layer4"><head>
+
+ <title> New Document </title>
+
+ <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+ <style type="text/css">
+
+div{
+
+margin:0px auto;
+
+}
+
+ </style>
+
+</head>
+
+<body>
+
+ <div style="margin-top:100px;width:450px;">
+
+ <canvas id="drawing" width="320" height="240"> Your browser does not support the canvas element.</canvas>
+
+ </div>
+
+</body>
+
+  <script type="text/javascript">
+
+function currentClock(){
+
+ var dt = new Date();
+
+ var minutes = dt.getMinutes();
+
+ var hours = dt.getHours();
+
+ var seconds = dt.getSeconds();
+
+ var _basicRadian = 2 * Math.PI/360;
+
+ /** 角度是以分针指向12时计算 **/
+
+ var _basicSecondAngle = 6;
+
+ var _basicMinuteAngle = 6;          //一分钟的角度
+
+ var _basicHourAngle = 30;  
+
+ var _basicHourPerAngle = 0.5; //分针移动一分钟时间移动的角度 360/60 = 30/x  x= 0.5
+
+ var _basicMinutesPerAngle = 0.1; // 秒针移动一秒，分针移动的角度  360/6 = 6/x  x = 0.1
+
+ var _secondsAngle = seconds * _basicSecondAngle;
+
+ var _minutesAngle =  minutes * _basicMinuteAngle + seconds * _basicMinutesPerAngle;   //当前分钟的角度
+
+ var _hoursAngle = hours * _basicHourAngle + minutes * _basicHourPerAngle;
+
+ //秒针坐标
+
+ var secondsPointX = Math.sin(_secondsAngle * _basicRadian) * 85 + 100;
+
+ var secondsPointY = 100 - Math.cos(_secondsAngle * _basicRadian) * 85;
+
+ //分针坐标
+
+ var minutesPointX = Math.sin(_minutesAngle * _basicRadian) * 77 + 100;
+
+ var minutesPointY = 100 - Math.cos(_minutesAngle * _basicRadian) * 77;
+
+ //时针坐标
+
+ var hoursPointX = Math.sin(_hoursAngle * _basicRadian) * 70 + 100;
+
+ var hoursPointY = 100 - Math.cos(_hoursAngle * _basicRadian) * 70;
+
+ //document.write("X:" + minutesPointX + "------Y:" + minutesPointY);
+
+var drawing = document.getElementById("drawing");
+
+/*Mozilla 支持*/
+
+if(drawing.getContext){
+
+var context = drawing.getContext("2d");
+
+}
+
+context.clearRect(0, 0, 300, 300);
+
+context.beginPath();
+
+context.lineWidth = "2";
+
+//绘制外圆
+
+context.arc(100, 100, 99, 0, 2 * Math.PI, false);
+
+//绘制内圆
+
+context.moveTo(194, 100);
+
+context.arc(100, 100, 94, 0, 2 * Math.PI, false);
+
+context.save();
+
+context.stroke();
+
+context.moveTo(104, 100);
+
+context.fillStyle = "rgba(0, 0, 255, 0.5)";
+
+context.arc(100, 100, 4, 0, 2 * Math.PI, false);
+
+//绘制秒针
+
+context.moveTo(100, 100);
+
+context.lineTo(secondsPointX, secondsPointY);
+
+context.lineCap = "square";
+
+//绘制分针
+
+context.moveTo(100, 100);
+
+context.lineTo(minutesPointX, minutesPointY);
+
+context.save();
+
+context.stroke();
+
+//绘制时针
+
+context.beginPath();
+
+context.moveTo(100, 100);
+
+context.lineTo(hoursPointX, hoursPointY);
+
+context.save();
+
+context.stroke();
+
+context.font = "bold 10px Arial";
+
+context.textAlign = "center";
+
+context.textBaseline = "middle";
+
+context.fillText("12", 100, 12);
+
+context.fillText("6", 100, 187);
+
+context.fillText("9", 12, 100);
+
+context.fillText("3", 187, 100);
+
+context.fillText("1", 100+88/2, 100 - Math.sqrt(88*88-44*44));
+
+context.fillText("2", 100 + Math.sqrt(88*88-44*44), 100-88/2);
+
+context.fillText("4", 100 + Math.sqrt(88*88-44*44), 100+88/2);
+
+context.fillText("5", 100+88/2, 100 + Math.sqrt(88*88-44*44));
+
+context.fillText("7", 100-88/2, 100 + Math.sqrt(88*88-44*44));
+
+context.fillText("8", 100 - Math.sqrt(88*88-44*44), 100+88/2);
+
+context.fillText("10", 100 - Math.sqrt(88*88-44*44), 100-88/2);
+
+context.fillText("11", 100-88/2, 100 - Math.sqrt(88*88-44*44));
+
+context.save();
+
+context.stroke();
+
+}
+
+   function showTime(){
+
+   currentClock();
+
+   setTimeout(showTime, 1000);
+
+   }
+
+showTime();
+
+ </script></div>
+<script type="text/javascript"> 
+var ball; 
+var mouseX = 100; 
+var mouseY = 100; 
+var angle = 0; 
+var radius = 50; 
+
+function run(){ 
+if(ball === undefined){ 
+ball = document.createElement("span"); 
+ball.style.position = "absolute"; 
+ball.style.color = "#FF0000"; 
+ball.style.zIndex = 999999999; 
+ball.innerHTML = "QAQ"; 
+document.body.appendChild(ball); 
+} 
+
+ball.style["left"] = mouseX+(Math.cos(angle)*radius) + "px"; 
+ball.style["top"] = mouseY+(Math.sin(angle)*radius) + "px"; 
+angle+=0.1; 
+} 
+function MousePos(e) 
+{ 
+e = e || window.event; 
+var x,y; 
+if(!document.all){ 
+x = e.pageX; 
+y = e.pageY; 
+} 
+else{ 
+x = event.clientX + document.documentElement.scrollLeft; 
+y = event.clientY + document.documentElement.scrollTop; 
+} 
+return {x:x,y:y}; 
+} 
+function setXY(e) 
+{ 
+e = e || window.event; 
+var pos = MousePos(e); 
+mouseX = pos.x; 
+mouseY = pos.y; 
+} 
+window.onload = function(){ 
+setInterval(run,20); 
+
+document.documentElement.onmousemove = function(e){ 
+e = e || window.event; 
+setXY(e); 
+}; 
+} 
+</script> 
+<div id="Layer1">
+  <form id="form11" method="post" action="">
+    用户名：
+    <label>
+    <input type="text" id="username" />
+    </label>
+    密码：
+    <label>
+    <input type="password" id="pass" />
+    </label>
+    <label>
+    <input type="button" name="Submit" value="登陆" onClick="poi()" />
+    </label>
+    <label></label>
+    <input type="button" name="Submit2" value="注册" onClick="aaa()"/>
+	
+    
+  </form>
+</div>
+<div id="wrapper">
+  <div id="header">
+		<div id="logo">
+			<h1><a href="#">醉美天下</a></h1>
+			<p>Drunken Beauty</p>
+		</div>
+		<div id="search">
+			<form method="get" action="">
+				<fieldset>
+					<input type="text" name="s" id="search-text" size="15" value="输入关键字" />
+					<input type="submit" id="search-submit" value="GO" />
+				</fieldset>
+			</form>
+		</div>
+  </div>
+	<!-- end #header -->
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="menu">
+					<ul>
+						<li class="current_page_item"><a href="index.html">首页</a></li>
+						<li><a href="articlelist.html">美文</a></li>
+						<li><a href="photo.html">相册</a></li>
+						<li><a href="message.html">留言板</a></li>
+						<li><a href="personinfo.html">个人信息</a></li>
+						<li></li>
+					</ul>
+				</div>
+				<!-- end #menu -->
+				
+				<div id="content"><div class="post">
+				<h2 class="title"><a href="#">Welcome to My Home</a></h2>
+				  <p class="meta">&nbsp;<a href="#" class="permalink"></a></p>
+						<div class="entry">
+							<p><img src="images/person.jpg" width="150" height="114" alt="" class="alignleft border" onMouseOver="visible(this,1)" onMouseOut="visible(this,0)"/>新闻，是指报纸、电台、电视台、互联网等媒体所传播的信息的一种称谓。新闻概念有广义与狭义之分。就其广义而言，除了发表于报刊、广播、电视上的评论与专文外的常用文本都属于新闻之列，包括消息、通讯、特写、速写（有的将速写纳入特写之列）等等；狭义的新闻则专指消息，消息是用概括的叙述方式，比较简明扼要的文字，迅速及时地报道国内外新近发生的、有价值的事实。
+1943年陆定一提出：“新闻的定义，就是新近发生事实的报道。”范长江也对新闻下了一个定义：“新闻就是广大群众欲知应知而未知的重要事实”。						</div>
+					</div>
+				  <div class="post">
+						<h1>心是净土，也是红尘</h1>
+						<div class="entry">
+							<p><img src="images/img06.jpg" width="143" height="143" alt="" class="alignleft border" />花间一壶酒，独坐，独醉，独舞。花入壶中，云入壶中，梦入壶中。山水、日月、星辰、天地，尽入壶中。起身，转体，迈步，腾挪，跃进，蹦跳，我舞，我蹈。手中无剑，心中有剑，屠龙，倚天。气沉丹田，凌波微步，无边的剑气，幻化成太极，武当。安得倚天抽宝剑，我斩，斩尽心中妖魔，无边的花雨纷飞，曼妙成庄严世界。移泰山，斩昆仑，平天山，挽天河，意气到处，海啸天开。项羽扛鼎，曹操横槊，成吉思汗弯弓射雕，问苍茫大地，谁主沉浮？</p>
+					  </div>
+				    <a href="mailto:1452584801" ></a>				  </div>
+					<div class="post">
+					  <div class="post">
+                        <h1>跳出五行弃红尘，管它日月并乾坤</h1>
+						  <div class="entry">
+                            <p><img src="images/img06.jpg" width="143" height="143" alt="" class="alignleft border" />花间一壶酒，独坐，独醉，独舞。花入壶中，云入壶中，梦入壶中。山水、日月、星辰、天地，尽入壶中。起身，转体，迈步，腾挪，跃进，蹦跳，我舞，我蹈。手中无剑，心中有剑，屠龙，倚天。气沉丹田，凌波微步，无边的剑气，幻化成太极，武当。安得倚天抽宝剑，我斩，斩尽心中妖魔，无边的花雨纷飞，曼妙成庄严世界。移泰山，斩昆仑，平天山，挽天河，意气到处，海啸天开。项羽扛鼎，曹操横槊，成吉思汗弯弓射雕，问苍茫大地，谁主沉浮？</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 曾倾我以暖的，请原谅我不曾饱满地回馈。而今我如霜丛一枝，只愿别冷了你的山水。若看到瘦枝上琢出的霜花，那是夜描摹下的我的思念，静静地开在冷寂里，虽失了芬芳，却也是纯粹。也许，余生的思念不再嫣红，终将成霜，这里的白，不过是洗掉色了的一个又一个夜，但我不会忘却在春秋里盛开过的那些文字，声音，容颜和心愿；不会忘却青灯素袖，墨案香书。我心已足。倘若我孤峭的枝桠能过滤掉随风而过的尘世浮华，那么，我会努力伸展，只求能为你送去一丝清风，永拂着你的纯洁。 <br />
+                              春天总是会来的，我的思念也会再一次化水而淌，流进那个江头江尾的意境。或许，在某个你跣足而濯的温暖黄昏，会有一滴你甩而未落的水珠，盛着淡淡的暮光，闪在你的裙裾之上——那是我唯一能想到的，再见你的方式。若真有彼时，只祈你微笑的注视没将我认出，否则，我便会刹时还原成墨滴，将天地暗去。 <br />
+                            </p>
+					    </div>
+					  <a href="mailto:1452584801" ></a></div>
+				  </div>
+					<div style="clear: both;">&nbsp;</div>
+			  </div>
+				<!-- end #content -->
+				<div id="sidebar">
+					<ul>
+						<li>
+							<h2>座右铭</h2>
+							<p>人生的目的不是为了活得长，是为了活得好。</p>
+						</li>
+						<li>
+							<h2>博客</h2>
+							<ul>
+								<li><a href="article1.html">因水而墨</a></li>
+								<li><a href="article2.html">牢笼</a></li>
+								<li>
+							    <a href="article3.html">舍得自然，坦然人生						        </a></li>
+								<li><a href="article4.html">假如人生不曾相遇</a></li>
+								<li><a href="article5.html">煮诗烹茶，悟静好人生</a></li>
+								
+								  <div align="right"><a href="articlelist.html">更多</a></div>
+							</ul>
+						</li>
+						<li>
+							<h2>留言</h2>
+							<ul>
+								<li>低调蓄势，华丽转身</li>
+								<li>一日不见如隔三秋</li>
+								<li>岁月改变了你的容颜，改不了我心中的回忆</li>
+								<li>岁月静好</li>
+								<li>逝水年华，青春仍在</li>
+								
+								  <div align="right"><a href="message.html">更多</a></div>
+							</ul>
+						</li>
+						<li>
+							<h2>友情链接</h2>
+							<ul>
+								<li><a href="http://baidu.com">百度</a></li>
+								<li><a href="http://user.qzone.qq.com/1452584801">谷歌</a></li>
+								<li>
+								  <a href="http://user.qzone.qq.com/1452584801">hao123</a><a href="article3.html"></a></li>
+								<li><a href="http://user.qzone.qq.com/1452584801"></a><a href="article4.html"></a></li>
+								<li><a href="http://user.qzone.qq.com/1452584801">QQ空间</a><a href="article5.html"></a></li>
+								
+								  <div align="right"><a href="message.html">更多</a></div>
+							</ul>
+						</li>
+						<li>
+							<h2>联系方式</h2>
+							<ul>
+								<li>手机：xxxxxxxxxxx</li>
+								<li>QQ: <a href="tencent://message/?uin=1452584801&amp;Site=QQ聊天&amp;Menu=yes">xxxxxxxxxxx</a></li>
+								<li>电子邮件：<a href="http://mail.qq.com/">xxxxxxxxx@qq.com</a></li>
+								<li>地址：长春工业大学（林园校区）</li>
+						    </ul>
+						</li>
+					</ul>
+			  </div>
+				<!-- end #sidebar -->
+				<div style="clear: both;">&nbsp;
+				<h2>岁月清浅，人生无恙</h2>
+				  <div align="right" class="STYLE1"><a href="photo.html">更多</a> </div>
+				  <div id="www_zzjs_net">
+                    <div id="indemo">
+                      <div id="demo1"><a href="photodetail.html"> <img src="images/1(1).jpg" width="150" height="114" border="0"  style="cursor:pointer;"  onload="return imgzoom(this,600);"/> <img src="images/1(2).jpg" width="150" height="114" border="0"  style="cursor:pointer;"  onload="return imgzoom(this,600);"/> <img src="images/1(3).jpg" width="150" height="114" border="0"  style="cursor:pointer;"  onload="return imgzoom(this,600);"/> <img src="images/1(5).jpg" width="150" height="114" border="0"  style="cursor:pointer;"  onload="return imgzoom(this,600);"/> <img src="images/1(6).jpg" width="150" height="114" border="0"  style="cursor:pointer;"  onload="return imgzoom(this,600);"/> <img src="images/1(4).jpg" width="150" height="114" border="0"  style="cursor:pointer;"  onload="return imgzoom(this,600);"/> </a></div>
+                      <div id="demo2"></div>
+                    </div>
+			      </div>
+				  <script>
+<!--
+var speed=10;
+var tab=document.getElementById("www_zzjs_net");
+var tab1=document.getElementById("demo1");
+var tab2=document.getElementById("demo2");
+tab2.innerHTML=tab1.innerHTML;
+function Marquee(){
+if(tab2.offsetWidth-tab.scrollLeft<=0)
+tab.scrollLeft-=tab1.offsetWidth
+else{
+tab.scrollLeft++;
+}
+}
+var MyMar=setInterval(Marquee,speed);
+tab.onmouseover=function() {clearInterval(MyMar)};
+tab.onmouseout=function() {MyMar=setInterval(Marquee,speed)};
+-->
+  </script>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer-wrapper">
+	<div id="footer">
+		<p>made by 31507 李柏乐 </p>
+  </div>
+</div>
+<!-- end #footer -->
+</body>
+</html>

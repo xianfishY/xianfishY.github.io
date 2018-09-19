@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>醉美天下</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="#">醉美天下</a></h1>
+			<p>Drunken Beauty</p>
+		</div>
+		<div id="search">
+			<form method="get" action="">
+				<fieldset>
+					<input type="text" name="s" id="search-text" size="15" value="输入关键字" />
+					<input type="submit" id="search-submit" value="GO" />
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="menu">
+					<ul>
+						<li class="current_page_item"><a href="index.html">首页</a></li>
+						<li><a href="articlelist.html">美文</a></li>
+						<li><a href="photo.html">相册</a></li>
+						<li><a href="message.html">留言板</a></li>
+						<li><a href="personinfo.html">个人信息</a></li>
+						<li></li>
+
+					</ul>
+				</div>
+				<!-- end #menu -->
+				<div id="content">
+					<div class="post">
+						<h1>留言板</h1>
+						<h2 class="title">&nbsp;</h2>
+					  <div class="entry">
+					    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td class="padding55 nenrong2"><table width="540" border="0" align="center" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                      <td width="660" height="60" class="table3"><table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                          <tr>
+                                            <td width="74%" class="css">&nbsp;</td>
+                                            <td width="16%"><a href="messageadd.html"><img src="images/liuyan.gif" width="60" height="50" border="0" /></a></td>
+                                            <td width="10%"><a href="message.html"><img src="images/chakan.gif" width="60" height="50" border="0" /></a></td>
+                                          </tr>
+                                      </table></td>
+                                    </tr>
+                                  </table>
+                                    <table width="90%" border="0" cellspacing="0" cellpadding="0">
+                                      <tr>
+                                        <td height="20">&nbsp;</td>
+                                      </tr>
+                                    </table>
+                                    <table width="540" border="0" align="center" cellpadding="0" cellspacing="0">
+                                      <tr>
+                                        <td height="1" class="left">&nbsp;</td>
+                                      </tr>
+                                      <tr>
+                                        <td height="60" valign="top" class="table3"><table width="540" border="0" align="center" cellpadding="0" cellspacing="0">
+                                          <tr>
+                                            <td width="30" height="20" class="left">&nbsp;</td>
+                                            <td width="585" class="mid">&nbsp;</td>
+                                            <td width="35" height="20" class="right">&nbsp;</td>
+                                          </tr>
+                                          <tr>
+                                            <td height="60" colspan="3" class="table3"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <form id="form3" method="post" action="lybsave.asp" onsubmit="return check3();">
+                                                  <tr>
+                                                    <td width="20%" height="35" align="right"><strong class="hs">留言标题</strong><strong class="hs">：</strong></td>
+                                                    <td width="61%"><label>
+                                                      <input name="title" type="text"  class="input1" size="40" maxlength="50" />
+                                                      </label>
+                                                        <font color="#FF0000">*</font> </td>
+                                                    <td width="19%" rowspan="5" align="center">&nbsp;</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td height="35" align="right"><strong class="hs">呢　　称</strong><strong class="hs">：</strong></td>
+                                                    <td><input name="name" type="text" id="name" size="40" maxlength="20" />
+                                                        <label> </label>
+                                                        <font color="#FF0000">*</font></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td height="35" align="right"><strong class="hs">联系电话</strong><strong class="hs">：</strong></td>
+                                                    <td><input name="dianhua" type="text" id="dianhua" size="40" maxlength="15" /></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td height="35" align="right"><strong class="hs">QQ</strong><strong class="hs">：</strong></td>
+                                                    <td><input name="qq" type="text" id="qq" size="40" maxlength="15" /></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td height="35" align="right"><strong class="hs">EMAIL</strong><strong class="hs">：</strong></td>
+                                                    <td><input name="email" type="text" id="email" size="40" maxlength="50" /></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td height="35" align="right"><strong class="hs">主　　页</strong><strong class="hs">：</strong></td>
+                                                    <td colspan="2"><input name="url" type="text" id="url" value="http://" size="40" maxlength="50" /></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td height="121" align="right"><strong class="hs">留言内容</strong><strong class="hs">：</strong></td>
+                                                    <td colspan="2"><label>
+                                                      <textarea name="content" cols="40" rows="8" id="textarea"></textarea>
+                                                      </label>
+                                                        <font color="#FF0000">* </font></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td height="30" align="right"><strong class="hs">选择表情</strong><strong class="hs">：</strong></td>
+                                                    <td height="30" colspan="2"><label>
+                                                      <input name="r" type="radio" value="/face/1.gif" checked="checked" />
+                                                      <img src="face/1.gif" width="24" height="24" />
+                                                      <input type="radio" name="r" value="face/2.gif" />
+                                                      <img src="face/2.gif" width="24" height="24" />
+                                                      <input type="radio" name="r" value="face/3.gif" />
+                                                      <img src="face/3.gif" width="24" height="24" />
+                                                      <input type="radio" name="r" value="face/4.gif" />
+                                                      <img src="face/4.gif" width="24" height="24" />
+                                                      <input type="radio" name="r" value="face/5.gif" />
+                                                      <img src="face/5.gif" width="24" height="24" />
+                                                      <input type="radio" name="r" value="face/6.gif" />
+                                                      <img src="face/6.gif" width="24" height="24" />
+                                                      <input type="radio" name="r" value="face/7.gif" />
+                                                      <img src="face/7.gif" width="24" height="24" /> </label></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td height="30" align="right">&nbsp;</td>
+                                                    <td height="30" colspan="2"><input type="radio" name="r" value="face/8.gif" />
+                                                        <img src="face/8.gif" width="24" height="24" />
+                                                        <input type="radio" name="r" value="face/9.gif" />
+                                                        <img src="face/9.gif" width="24" height="24" />
+                                                        <input type="radio" name="r" value="face/10.gif" />
+                                                        <img src="face/10.gif" width="24" height="24" />
+                                                        <input type="radio" name="r" value="face/11.gif" />
+                                                        <img src="face/11.gif" width="24" height="24" />
+                                                        <input type="radio" name="r" value="face/12.gif" />
+                                                        <img src="face/12.gif" width="24" height="24" />
+                                                        <input type="radio" name="r" value="face/13.gif" />
+                                                        <img src="face/13.gif" width="24" height="24" />
+                                                        <input type="radio" name="r" value="face/14.gif" />
+                                                        <img src="face/14.gif" width="24" height="24" /> </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td height="30" align="right">&nbsp;</td>
+                                                    <td height="30" colspan="2"><input type="radio" name="r" value="face/15.gif" />
+                                                        <img src="face/15.gif" width="24" height="24" />
+                                                        <input type="radio" name="r" value="face/16.gif" />
+                                                        <img src="face/16.gif" width="24" height="24" />
+                                                        <input type="radio" name="r" value="face/17.gif" />
+                                                        <img src="face/17.gif" width="24" height="24" />
+                                                        <input type="radio" name="r" value="face/18.gif" />
+                                                        <img src="face/18.gif" width="24" height="24" />
+                                                        <input type="radio" name="r" value="face/19.gif" />
+                                                        <img src="face/19.gif" width="24" height="24" />
+                                                        <input type="radio" name="r" value="face/20.gif" />
+                                                        <img src="face/20.gif" width="24" height="24" />
+                                                        <input type="radio" name="r" value="face/21.gif" />
+                                                        <img src="face/21.gif" width="24" height="24" /> </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td height="30" align="right" class="hs">验证码<strong>：</strong></td>
+                                                    <td height="30" colspan="2" class="hs"><input name="mofei" type="text" id="mofei" size="10" />
+                                                      &nbsp;&nbsp;<b></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td height="30" colspan="3" align="center"><label>
+                                                      <input type="image" name="imageField" src="images/submit.gif" />
+                                                      <img src="images/reset.gif" width="63" height="22" onclick="reset1()" style="CURSOR: hand" /> </label></td>
+                                                  </tr>
+                                                </form>
+                                            </table></td>
+                                          </tr>
+                                          <tr>
+                                            <td width="30" height="20" class="bom_left">&nbsp;</td>
+                                            <td class="bom_mid">&nbsp;</td>
+                                            <td class="bom_right">&nbsp;</td>
+                                          </tr>
+                                        </table></td>
+                                      </tr>
+                                    </table>
+                                    <div class="s" align="center"></div></td>
+                              </tr>
+                        </table>
+					  </div>
+				  </div>
+					<div style="clear: both;">&nbsp;</div>
+				</div>
+				<!-- end #content -->
+				<div id="sidebar">
+					<ul>
+						<li>
+							<h2>博客</h2>
+							<ul>
+								<li><a href="article1.html">因水而墨</a></li>
+								<li><a href="article2.html">牢笼</a></li>
+								<li>
+							    <a href="article3.html">舍得自然，坦然人生						        </a></li>
+								<li><a href="article4.html">假如人生不曾相遇</a></li>
+								<li><a href="article5.html">煮诗烹茶，悟静好人生</a></li>
+								
+								  <div align="right"><a href="articlelist.html">更多</a></div>
+							</ul>
+						</li>
+						<li>
+							<h2>留言</h2>
+							<ul>
+								<li>低调蓄势，华丽转身</li>
+								<li>一日不见如隔三秋</li>
+								<li>岁月改变了你的容颜，改不了我心中的回忆</li>
+								<li>岁月静好</li>
+								<li>逝水年华，青春仍在</li>
+								
+								  <div align="right"><a href="message.html">更多</a></div>
+							</ul>
+						</li>
+						<li>
+					</ul>
+				</div>
+				<!-- end #sidebar -->
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer-wrapper">
+	<div id="footer">
+		<p>made by 31507 李柏乐 </p>
+  </div>
+</div>
+<!-- end #footer -->
+</body>
+</html>
